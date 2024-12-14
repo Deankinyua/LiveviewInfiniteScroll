@@ -6,6 +6,7 @@ defmodule InfiniteScrollWeb.HomeLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
+    # connected?(socket)
     # * The initial page number is 1
     # *  By using temporary assigns and phx-update,
     # * we don't need to keep anything in memory,
