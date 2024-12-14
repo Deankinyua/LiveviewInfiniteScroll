@@ -12,6 +12,7 @@ export default InfiniteScroll = {
   },
   mounted() {
     this.pending = this.page();
+    // initializing the intersection observer
     this.observer = new IntersectionObserver(
       (entries) => this.loadMore(entries),
       {

@@ -17,6 +17,7 @@ defmodule InfiniteScrollWeb.Components.GalleryComponent do
           <img id={"image-#{random_id()}"} src={image} />
         <% end %>
       </div>
+
       <div id="infinite-scroll-marker" phx-hook="InfiniteScroll" data-page={@page}></div>
     </div>
     """

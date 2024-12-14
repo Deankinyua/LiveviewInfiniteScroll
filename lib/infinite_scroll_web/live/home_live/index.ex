@@ -31,16 +31,18 @@ defmodule InfiniteScrollWeb.HomeLive.Index do
   end
 
   defp images do
-    url = "https://images.pexels.com/photos/"
-    query = "?auto=compress&cs=tinysrgbg&w=600"
+    url = "/images/"
 
     ~W(
-      2880507 13046522 13076228 13350109 13302244 12883181
-      12977343 13180599 12059441 6431576 10651558 5507243
-      13386712 13290875 13392891 13156418 8581056 13330222
-      10060916 8064098
+ 1 2 3 4 5 6 7 8 9 10 11 12 13
     )
-    |> Enum.map(&"#{url}#{&1}/pexels-photo-#{&1}.webp#{query}")
+    |> Enum.map(&"#{url}image#{&1}.jpeg")
     |> Enum.shuffle()
+
+    # "https://api.pexels.com/v1/photos/2014422"
+
+    # dbg(images)
+
+    # GzbgJpzeWPezpw9pbwjWAanFy4jgUnHwZywCgvzl6QSms3RLDF5vEbnx
   end
 end
