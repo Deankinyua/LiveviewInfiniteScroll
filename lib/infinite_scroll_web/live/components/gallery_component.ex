@@ -18,8 +18,15 @@ defmodule InfiniteScrollWeb.Components.GalleryComponent do
         <% end %>
       </div>
 
+    <div id="push-from-another-liveview">This Illustrates how</div>
+
       <div id="infinite-scroll-marker" phx-hook="InfiniteScroll" data-page={@page}></div>
     </div>
     """
+  end
+
+  def handle_event("nothing", params, socket) do
+    dbg(params)
+    {:noreply, socket}
   end
 end

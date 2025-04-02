@@ -9,6 +9,7 @@ export default InfiniteScroll = {
     if (target.isIntersecting && this.pending == this.page()) {
       this.pending = this.page() + 1;
       this.pushEvent("load-more", {});
+      this.pushEventTo("#push-from-another-liveview", "nothing", {});
     }
   },
   mounted() {
